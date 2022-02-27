@@ -48,7 +48,7 @@ while 1:
         break
     else:
         print("Please enter a valid choice!")
-# Some extra functions
+# Some extra function
 # setdefault() Returns the value of the specified key. If key does not exist: insert the key, with the specified value
 # copy()	Returns a copy of the dictionary
 # fromkeys()	Returns a dictionary with the specified keys and value
