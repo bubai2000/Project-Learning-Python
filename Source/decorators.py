@@ -6,17 +6,18 @@ if we run something imported from other package __name__ will be the package nam
 
 
 
-def intdiv(func):
-    def inner(a,b):
-        if(a<b):
-            return "Division not possible!"
-        else:
-            return func(a,b)
-    return inner
+def dec(func):
+    def wrapper(a,b):
+        if b==0:
+            print("Division by zero not allowed!")
+            return
+        return func(a,b)
+    return wrapper
 
-@intdiv #below function uses intdiv decorator
-def division(a,b):
-    return a/b
+@dec
+def div(a: float,b: float):
+    print(a/b)
+    
+div(10,5)
+div(3,0)
 
-print(division(10,5))
-print(division(2,3))
